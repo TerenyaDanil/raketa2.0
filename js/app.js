@@ -165,12 +165,49 @@ var swiper = new Swiper('.swiper-container', {
 let sliderBtn = document.querySelector('.slider-inner__btn');
 let phone = document.querySelector('.phone__container');
 
+sliderBtn.onclick = function () {
+	phone.classList.toggle('active');
+
+}
+
 
 let inv = document.querySelector('.video__btn-item-inv');
 let exp = document.querySelector('.video__btn-item-exp');
 
-let invInner = document.querySelector('.video__btn-item-inv');
-let expInner = document.querySelector('.video__btn-item-exp');
+let invInner = document.querySelector('.inner-video-inv');
+let expInner = document.querySelector('.inner-video-exp');
+
+inv.onclick = function () {
+	invInner.classList.remove('hide');
+	expInner.classList.remove('active');
+
+}
+
+exp.onclick = function () {
+	invInner.classList.add('hide');
+	expInner.classList.add('active');
+
+}
+
+
+
+
+var element = document.getElementById('phone-mask-1');
+var element2 = document.getElementById('phone-mask-2');
+
+var maskOptions = {
+	mask: '+{7}(000)000-00-00'
+};
+
+var maskOptions2 = {
+	mask: '+{7}(000)000-00-00'
+};
+
+
+IMask(element, maskOptions2);
+IMask(element2, maskOptions);
+
+
 
 
 
@@ -460,66 +497,66 @@ tl13.from(".access__title", { duration: 1.3, ease: "power4.out", opacity: 0, y: 
 
 
 
-if (window.innerWidth < 737) {
-	let iv1 = gsap.timeline({
-		scrollTrigger: {
-			trigger: ".inner-video__item-1",   // pin the trigger element while active
-			scroller: ".scrollContainer",
-			start: "top center",
+
+let iv1 = gsap.timeline({
+	scrollTrigger: {
+		trigger: ".inner-video__item-1",   // pin the trigger element while active
+		scroller: ".scrollContainer",
+		start: "top center",
 
 
-		}
-	});
-	iv1.from(".inner-video__dop-1", { duration: 1.3, ease: "power4.out", opacity: 0, y: 100 })
+	}
+});
+iv1.from(".inner-video__dop-1", { duration: 1.3, ease: "power4.out", opacity: 0, y: 100 })
 
 
-	let iv2 = gsap.timeline({
-		scrollTrigger: {
-			trigger: ".inner-video__item-2",   // pin the trigger element while active
-			scroller: ".scrollContainer",
-			start: "top center",
+let iv2 = gsap.timeline({
+	scrollTrigger: {
+		trigger: ".inner-video__item-2",   // pin the trigger element while active
+		scroller: ".scrollContainer",
+		start: "top center",
 
 
-		}
-	});
-	iv2.from(".inner-video__dop-2", { duration: 1.3, ease: "power4.out", opacity: 0, y: 100 })
+	}
+});
+iv2.from(".inner-video__dop-2", { duration: 1.3, ease: "power4.out", opacity: 0, y: 100 })
 
 
-	let iv3 = gsap.timeline({
-		scrollTrigger: {
-			trigger: ".inner-video__item-3",   // pin the trigger element while active
-			scroller: ".scrollContainer",
-			start: "top center",
+let iv3 = gsap.timeline({
+	scrollTrigger: {
+		trigger: ".inner-video__item-3",   // pin the trigger element while active
+		scroller: ".scrollContainer",
+		start: "top center",
 
 
-		}
-	});
-	iv3.from(".inner-video__dop-3", { duration: 1.3, ease: "power4.out", opacity: 0, y: 100 })
+	}
+});
+iv3.from(".inner-video__dop-3", { duration: 1.3, ease: "power4.out", opacity: 0, y: 100 })
 
 
-	let iv4 = gsap.timeline({
-		scrollTrigger: {
-			trigger: ".inner-video__item-4",   // pin the trigger element while active
-			scroller: ".scrollContainer",
-			start: "top center",
+let iv4 = gsap.timeline({
+	scrollTrigger: {
+		trigger: ".inner-video__item-4",   // pin the trigger element while active
+		scroller: ".scrollContainer",
+		start: "top center",
 
 
-		}
-	});
-	iv4.from(".inner-video__dop-4", { duration: 1.3, ease: "power4.out", opacity: 0, y: 100 })
+	}
+});
+iv4.from(".inner-video__dop-4", { duration: 1.3, ease: "power4.out", opacity: 0, y: 100 })
 
 
-	let iv5 = gsap.timeline({
-		scrollTrigger: {
-			trigger: ".inner-video__item-5",   // pin the trigger element while active
-			scroller: ".scrollContainer",
-			start: "top center",
+let iv5 = gsap.timeline({
+	scrollTrigger: {
+		trigger: ".inner-video__item-5",   // pin the trigger element while active
+		scroller: ".scrollContainer",
+		start: "top center",
 
 
-		}
-	});
-	iv5.from(".inner-video__dop-5", { duration: 1.3, ease: "power4.out", opacity: 0, y: 100 })
-}
+	}
+});
+iv5.from(".inner-video__dop-5", { duration: 1.3, ease: "power4.out", opacity: 0, y: 100 })
+
 
 
 let accdop = gsap.timeline({
