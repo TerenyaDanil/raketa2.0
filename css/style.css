@@ -473,6 +473,7 @@ body.lock {
   -webkit-transform: translate(-50%, -50%);
       -ms-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
+  z-index: -10;
 }
 
 .slider-inner__slide {
@@ -581,12 +582,26 @@ body.lock {
 
 .phone__container {
   position: relative;
-  padding: 122px 0px 100px 0px;
+  opacity: 0;
+  height: 0;
+  visibility: hidden;
+  -webkit-transition: all 0.6s ease 0s;
+  -o-transition: all 0.6s ease 0s;
+  transition: all 0.6s ease 0s;
+  left: -600px;
+}
+
+.phone__container.active {
+  padding: 0px 0px 100px 0px;
+  opacity: 1;
+  height: 405px;
+  left: 0;
+  visibility: visible;
 }
 
 .phone__title {
-  max-width: 600px;
-  margin: 0px auto 26px;
+  max-width: 710px;
+  margin: 0px auto 56px;
   font-size: 3.6rem;
   text-align: center;
 }
@@ -594,14 +609,12 @@ body.lock {
 .phone__inner {
   max-width: 740px;
   margin: 0px auto;
-  height: 183px;
-  background-color: #4697cc;
-  -webkit-box-shadow: 0px 0px 66px -27px #75fff4;
-          box-shadow: 0px 0px 66px -27px #75fff4;
-  padding: 0px 54px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -609,6 +622,11 @@ body.lock {
 
 .phone__inner .form__input {
   margin: 0px auto;
+}
+
+.phone__btn {
+  margin: 50px 0px 0px 0px;
+  text-align: center;
 }
 
 .phone__bg {
@@ -622,8 +640,8 @@ body.lock {
 }
 
 .phone__bg-global {
-  top: -860px;
-  z-index: -2;
+  top: 1450px;
+  z-index: -12;
 }
 
 .video__container {
@@ -644,6 +662,9 @@ body.lock {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-transition: all 0.3s ease 0s;
+  -o-transition: all 0.3s ease 0s;
+  transition: all 0.3s ease 0s;
   margin: 0px 0px 40px 0px;
 }
 
@@ -651,6 +672,24 @@ body.lock {
   -webkit-box-pack: end;
       -ms-flex-pack: end;
           justify-content: flex-end;
+}
+
+.inner-video-exp {
+  opacity: 0;
+  visibility: hidden;
+  height: 0;
+}
+
+.inner-video-exp.active {
+  opacity: 1;
+  visibility: visible;
+  height: 860px;
+}
+
+.inner-video-inv.active {
+  opacity: 0;
+  visibility: hidden;
+  height: 0;
 }
 
 .inner-video__wrap {
@@ -698,7 +737,7 @@ body.lock {
 
 .inner-video__dop-1 {
   left: 20px;
-  top: -30px;
+  top: -63px;
 }
 
 .inner-video__dop-2 {
@@ -1016,6 +1055,19 @@ body.lock {
   bottom: -10px;
 }
 
+.access__dop-2 {
+  position: absolute;
+  top: 270px;
+  right: 7px;
+  -webkit-transform: rotate(-37deg);
+      -ms-transform: rotate(-37deg);
+          transform: rotate(-37deg);
+}
+
+.access__dop-2 img {
+  width: 100px;
+}
+
 @media (min-width: 992px) {
   .btn:hover {
     -webkit-transform: translate(0, 5px);
@@ -1130,7 +1182,7 @@ body.lock {
   }
 
   .slider__container {
-    padding: 0px 10px 106px 10px;
+    padding: 0px 10px 56px 10px;
   }
 
   .slider__bg {
@@ -1138,11 +1190,11 @@ body.lock {
   }
 
   .slider-inner__box {
-    left: -50px;
+    left: -20px;
   }
 
   .slider-inner__box img {
-    max-width: 150%;
+    max-width: 114%;
   }
 
   .slider-inner__text {
@@ -1152,6 +1204,9 @@ body.lock {
         -ms-transform: translate(0, 0);
             transform: translate(0, 0);
     position: relative;
+    font-size: 2.2rem;
+    padding: 40px 10px;
+    line-height: 30.74px;
   }
 
   .swiper-container {
@@ -1176,8 +1231,8 @@ body.lock {
     bottom: -90px;
   }
 
-  .phone__container {
-    padding: 62px 0px 100px 0px;
+  .phone__container.active {
+    padding: 0px 0px 100px 0px;
   }
 
   .phone__title {
@@ -1186,8 +1241,9 @@ body.lock {
   }
 
   .phone__inner {
-    height: 123px;
-    text-align: center;
+    -webkit-box-shadow: none;
+            box-shadow: none;
+    background-color: transparent;
     padding: 0;
     margin: 0px 10px;
     display: -webkit-box;
@@ -1212,7 +1268,11 @@ body.lock {
   }
 
   .video__container {
-    padding: 0px 10px 100px 10px;
+    padding: 0px 10px 20px 10px;
+  }
+
+  .inner-video-exp.active {
+    height: 1062px;
   }
 
   .inner-video__wrap {

@@ -161,6 +161,26 @@ var swiper = new Swiper('.swiper-container', {
 //////SLIDER///////////////
 
 
+//////action///////////////
+let sliderBtn = document.querySelector('.slider-inner__btn');
+let phone = document.querySelector('.phone__container');
+
+
+let inv = document.querySelector('.video__btn-item-inv');
+let exp = document.querySelector('.video__btn-item-exp');
+
+let invInner = document.querySelector('.video__btn-item-inv');
+let expInner = document.querySelector('.video__btn-item-exp');
+
+
+
+
+
+
+
+//////action///////////////
+
+
 //////LINK///////////////
 
 const anchors = document.querySelectorAll('a.scroll-to')
@@ -256,16 +276,16 @@ tl1.from(".slider__title", { duration: 1.3, ease: "power4.out", opacity: 0, y: 5
 
 
 
-let tl2 = gsap.timeline({
-	scrollTrigger: {
-		trigger: ".phone",   // pin the trigger element while active
-		scroller: ".scrollContainer",
-		start: "top center",
-	}
-});
+// let tl2 = gsap.timeline({
+// 	scrollTrigger: {
+// 		trigger: ".phone",   // pin the trigger element while active
+// 		scroller: ".scrollContainer",
+// 		start: "top center",
+// 	}
+// });
 
-tl2.from(".phone__bg-app", { duration: 1.3, ease: "power4.out", opacity: 0, y: 100 }, "-=.3")
-	.from(".phone__title", { duration: 1.3, ease: "power4.out", opacity: 0, y: -50 }, "-=.6")
+// tl2.from(".phone__bg-app", { duration: 1.3, ease: "power4.out", opacity: 0, y: 100 }, "-=.3")
+// 	.from(".phone__title", { duration: 1.3, ease: "power4.out", opacity: 0, y: -50 }, "-=.6")
 
 
 
@@ -500,6 +520,18 @@ if (window.innerWidth < 737) {
 	});
 	iv5.from(".inner-video__dop-5", { duration: 1.3, ease: "power4.out", opacity: 0, y: 100 })
 }
+
+
+let accdop = gsap.timeline({
+	scrollTrigger: {
+		trigger: ".access__container",   // pin the trigger element while active
+		scroller: ".scrollContainer",
+		start: "top center",
+
+
+	}
+});
+accdop.from(".access__dop-2", { duration: 2, ease: "elastic.out(1, 0.5)", opacity: 0, y: -150, }, "+=1.5")
 
 
 
