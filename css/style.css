@@ -1375,6 +1375,10 @@ body.lock {
     padding: 0px 0px 200px 0px;
   }
 
+  .invest__title {
+    font-size: 3.3rem;
+  }
+
   .invest__bg {
     top: 50%;
     -webkit-transform: translate(-50%, -50%);

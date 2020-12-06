@@ -368,8 +368,9 @@ let tl9 = gsap.timeline({
 	}
 });
 
-tl9.from(".wrap-invest__box-1", { duration: 1.3, ease: "power4.out", opacity: 0, y: 50 },"+=.1") 
-.from(".wrap-invest__text-1", { duration: 1.3, ease: "power4.out", opacity: 0, y: 50 }, "-=.5")
+tl9.from(".wrap-invest__box-1", { duration: 1.3, ease: "power4.out", opacity: 0, y: 50 }, "+=.1")
+	.from(".wrap-invest__title-1", { duration: 1.3, ease: "power4.out", opacity: 0, y: 50 }, "-=.4")
+	.from(".wrap-invest__text-1", { duration: 1.3, ease: "power4.out", opacity: 0, y: 50 }, "-=.4")
 
 
 
@@ -382,8 +383,9 @@ let tl10 = gsap.timeline({
 	}
 });
 
-tl10.from(".wrap-invest__box-2", { duration: 1.3, ease: "power4.out", opacity: 0, y: 50 }, "+=.1" )
-.from(".wrap-invest__text-2", { duration: 1.3, ease: "power4.out", opacity: 0, y: 50 }, "-=.5")
+tl10.from(".wrap-invest__box-2", { duration: 1.3, ease: "power4.out", opacity: 0, y: 50 }, "+=.1")
+	.from(".wrap-invest__title-2", { duration: 1.3, ease: "power4.out", opacity: 0, y: 50 }, "-=.4")
+	.from(".wrap-invest__text-2", { duration: 1.3, ease: "power4.out", opacity: 0, y: 50 }, "-=.4")
 
 
 
@@ -399,8 +401,9 @@ let tl11 = gsap.timeline({
 	}
 });
 
-tl11.from(".wrap-invest__box-3", { duration: 1.3, ease: "power4.out", opacity: 0, y: 50 }, "+=.1" )
-.from(".wrap-invest__text-3", { duration: 1.3, ease: "power4.out", opacity: 0, y: 50 }, "-=.5")
+tl11.from(".wrap-invest__box-3", { duration: 1.3, ease: "power4.out", opacity: 0, y: 50 }, "+=.1")
+	.from(".wrap-invest__title-3", { duration: 1.3, ease: "power4.out", opacity: 0, y: 50 }, "-=.4")
+	.from(".wrap-invest__text-3", { duration: 1.3, ease: "power4.out", opacity: 0, y: 50 }, "-=.4")
 
 
 
@@ -416,8 +419,9 @@ let tl12 = gsap.timeline({
 	}
 });
 
-tl12.from(".wrap-invest__box-4", { duration: 1.3, ease: "power4.out", opacity: 0, y: 50 }, "+=.1" )
-.from(".wrap-invest__text-4", { duration: 1.3, ease: "power4.out", opacity: 0, y: 50 }, "-=.5")
+tl12.from(".wrap-invest__box-4", { duration: 1.3, ease: "power4.out", opacity: 0, y: 50 }, "+=.1")
+	.from(".wrap-invest__title-4", { duration: 1.3, ease: "power4.out", opacity: 0, y: 50 }, "-=.4")
+	.from(".wrap-invest__text-4", { duration: 1.3, ease: "power4.out", opacity: 0, y: 50 }, "-=.4")
 
 
 
